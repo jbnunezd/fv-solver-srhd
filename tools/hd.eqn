@@ -1,0 +1,8 @@
+#!MC 1200
+# Created by Tecplot 360 build 12.0.0.4231
+$!ALTERDATA 
+  EQUATION = '{VelocityMagnitude}=SQRT({VelocityX}**2+{VelocityY}**2)'
+$!ALTERDATA 
+  EQUATION = '{SoundSpeed}=SQRT(1.4*{Pressure}/{Density})'
+$!ALTERDATA 
+  EQUATION = '{MachNumber}={VelocityMagnitude}/{SoundSpeed}'
