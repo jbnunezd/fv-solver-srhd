@@ -72,8 +72,8 @@ SELECT CASE(InitialCondition)
   CASE(211) ! Riemann Problem
     TEnd    = 1.0
     Kappa = 1.66666666666667
-    nElemsX = 200
-    nElemsY = 200
+    nElemsX = 600
+    nElemsY = 600
     MESH_X0 = (/-1.0,-1.0/)
     MESH_X1 = (/+1.0,+1.0/)
     PrimRefState1 = (/0.035145216124503,0.00,0.00,0.162931056509027/)
@@ -84,8 +84,8 @@ SELECT CASE(InitialCondition)
   CASE(214) ! Double Mach Reflection Problem
     TEnd    = 4.0
     Kappa   = 1.4
-    nElemsX = 400
-    nElemsY = 100
+    nElemsX = 2400
+    nElemsY = 600
     MESH_X0 = (/0.0,0.0/)
     MESH_X1 = (/4.0,1.0/)
     PrimRefState1 = (/8.564,0.4247*SIN(PI/3.0),-0.4247*COS(PI/3.0),0.3808/)
@@ -96,8 +96,8 @@ SELECT CASE(InitialCondition)
   CASE(216) ! Cloud-Shock Interaction
     TEnd    = 4.00
     Kappa   = 1.66666666666667
-    nElemsX = 800
-    nElemsY = 400
+    nElemsX = 1200
+    nElemsY = 600
     MESH_X0 = (/0.0,0.0/)
     MESH_X1 = (/2.0,1.0/)
     PrimRefState1 = (/1.00,0.00,0.00,0.05/)
@@ -107,8 +107,8 @@ SELECT CASE(InitialCondition)
   CASE(217) ! Kelvin-Helmholtz Instability
     TEnd    = 5.00
     Kappa   = 1.33333333333333
-    nElemsX = 400
-    nElemsY = 800
+    nElemsX = 600
+    nElemsY = 1200
     MESH_X0 = (/-0.5,-1.0/)
     MESH_X1 = (/+0.5,+1.0/)
     BoundaryConditionsType = (/1,1,1,1/)
@@ -123,10 +123,10 @@ KappaM1  = Kappa-1.0
 KappaP1  = Kappa+1.0
 sKappaM1 = 1.0/KappaM1
 
-Reconstruction    = 3
-ReconstructionFix = 2
+Reconstruction    = 4
+ReconstructionFix = 3
 
-WhichOutput  = 1
+WhichOutput  = 2
 nOutputFiles = 100
 
 VarNameVisu(1) = 'Density'
